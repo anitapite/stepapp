@@ -3,10 +3,11 @@ from django.db import models
 from django.utils import timezone
 
 
-class Post(models.Model):
+class Step(models.Model):
     participant = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     stepcount = models.IntegerField()
     activities = models.CharField(max_length=32)
+    notes = models.CharField(max_length=256)
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
 
