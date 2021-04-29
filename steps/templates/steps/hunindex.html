@@ -1,0 +1,23 @@
+{% extends "steps/layout.html" %}
+
+
+
+{% block body %}
+    <style>
+        body {
+            background-color: black;
+            color: whitesmoke;
+            text-align: center;
+        }
+    </style>
+    <h1>Jegyezd be a lepeseidet</h1>
+    <br>
+    <h3>Ide beirhatjuk a lepeseinket es visszanezhetjuk a korabbi eredmenyeket es gyozteseket</h3>
+    <br>
+    <h1>Az eheti nyertes... <b>***Anita***</b> nyilvan lol</h1>
+    <a href="{% url 'add' %}">Ird be a lepeseidet</a>
+    <br>
+    <a href="{% url 'history' %}">Korabbi eredmenyek</a>
+    <br>
+    <a href="{% url 'index' %}">English</a>
+{% endblock %}    

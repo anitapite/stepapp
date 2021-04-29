@@ -20,3 +20,6 @@ def add(request):
 
 def history(request):
     return render(request, 'steps/history.html')
+
+def hunindex(request):
+    return render(request, 'steps/hunindex.html')

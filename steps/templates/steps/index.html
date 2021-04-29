@@ -1,9 +1,23 @@
 {% extends "steps/layout.html" %}
 
+
+
 {% block body %}
+    <style>
+        body {
+            background-color: black;
+            color: whitesmoke;
+            text-align: center;
+        }
+    </style>
     <h1>Log your steps</h1>
     <br>
+    <h3>So here we can all log our steps and look back at previous results and winners</h3>
+    <br>
+    <h1>This week's winner is... <b>***Anita***</b> obviously lol</h1>
     <a href="{% url 'add' %}">Add your steps</a>
     <br>
     <a href="{% url 'history' %}">See previous results</a>
+    <br>
+    <a href="{% url 'hunindex' %}">Magyar</a>
 {% endblock %}    
