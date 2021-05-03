@@ -20,3 +20,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('steps.urls'))
 ]
+# path('steps/', include('steps.urls')) -> empty string main url of webserver, if multiple apps, add this line
