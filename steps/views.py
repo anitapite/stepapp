@@ -10,13 +10,22 @@ class StepCount(forms.Form):
     stepcount = forms.IntegerField(label="Stepcount")
     activities = forms.CharField(label='Activities')
 
+class StepForm(forms.ModelForm):
+    class Meta:
+        model = Step
+        fields = ['stepcount', 'activities']
+
 def index(request):
     return render(request, 'steps/index.html')
 
 def add(request):
+    form = StepForm(request.POST)
+    if form.is_valid():
+        form.save()
+        form = StepForm()
     return render(request, 'steps/add.html', {
-        'form': StepCount()
-    })
+       'form': form
+   })
 
 def history(request):
     return render(request, 'steps/history.html')
