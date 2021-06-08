@@ -39,3 +39,4 @@ def history(request):
 @login_required
 def hunindex(request):
     return render(request, 'steps/hunindex.html')
+
