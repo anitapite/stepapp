@@ -4,7 +4,7 @@ from django.utils import timezone
 
 
 class Step(models.Model):
-    participant = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True, blank=True)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True, blank=True)
     stepcount = models.IntegerField()
     activities = models.CharField(max_length=32)
     notes = models.CharField(max_length=256, null=True, blank=True)
