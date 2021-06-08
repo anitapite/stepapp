@@ -5,16 +5,26 @@ from django import forms
 from .models import Step
 from django.contrib.auth.decorators import login_required
 
+
 # Create your views here.
 
 class StepCount(forms.Form):
     stepcount = forms.IntegerField(label="Stepcount")
     activities = forms.CharField(label='Activities')
+   
+
+class DateInput(forms.DateInput):
+    input_type = 'date'
+
 
 class StepForm(forms.ModelForm):
     class Meta:
         model = Step
-        fields = ['stepcount', 'activities']
+        fields = ['stepcount', 'activities', 'date']
+        widgets = {
+            'date': DateInput(),
+        }
+
 
 @login_required
 def index(request):
