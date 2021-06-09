@@ -33,13 +33,13 @@ class StepForm(forms.ModelForm):
     class Meta:
         model = Step
         fields = [
-            'monday_stepcount', 'monday_activities', 'monday_date', 
-            'tuesday_stepcount', 'tuesday_activities', 'tuesday_date',
-            'wednesday_stepcount', 'wednesday_activities', 'wednesday_date', 
-            'thursday_stepcount', 'thursday_activities', 'thursday_date',
-            'friday_stepcount', 'friday_activities', 'friday_date', 
-            'saturday_stepcount', 'saturday_activities', 'saturday_date',
-            'sunday_stepcount', 'sunday_activities', 'sunday_date',
+            'monday_date', 'monday_stepcount', 'monday_activities',  
+            'tuesday_date', 'tuesday_stepcount', 'tuesday_activities', 
+            'wednesday_date', 'wednesday_stepcount', 'wednesday_activities',  
+            'thursday_date', 'thursday_stepcount', 'thursday_activities', 
+            'friday_date', 'friday_stepcount', 'friday_activities',  
+            'saturday_date', 'saturday_stepcount', 'saturday_activities', 
+            'sunday_date', 'sunday_stepcount', 'sunday_activities', 
             ]
         widgets = {
             'monday_date': DateInput(),
